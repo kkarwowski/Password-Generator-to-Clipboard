@@ -28,6 +28,10 @@ Fr(iday3189
 
 Clone this repository and install [requirements.txt](requirements.txt) dependencies.
 
+# Usage
+
+Right click on the padlock icon in your system tray and choose desired option.
+
 
 ```
 
