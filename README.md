@@ -12,16 +12,16 @@ There are two different types of passwords generated :
 
 Generates capitalised day of the week plus 4 digit number, for example:
 
-**_Tuesday2354
+**_Tuesday2354_**
 
 
 **Complex:**
 
 Generates capitalised day of the week with a 4 digit number at the end and random special character anywhere in the word, for example:
 
-**_Tuesd@ay2354
+**_Tuesd@ay2354_**
 
-**_Fr(iday3189
+**_Fr(iday3189_**
 
 
 # Installation
