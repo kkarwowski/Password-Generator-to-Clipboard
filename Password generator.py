@@ -1,13 +1,14 @@
-import PySimpleGUI as sg  
-import os
-import sys
-import time
+import PySimpleGUIQt as sg
 import pyperclip
 import random
+import os
+import sys
 from random import SystemRandom
 
+menu_def = ['BLANK',['&Generate', 'E&xit']]
 
-pass_list = ['Monday','Tuesday','Wednesday','Thursday','Friday','Welcome','LoveIT']
+
+pass_list = ['Monday','Tuesday','Wednesday','Thursday','Friday','Welcome','Saturday','Sunday']
 
 
 def resource_path(relative_path):
@@ -20,6 +21,7 @@ def resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
+
 def generate_rand():
     srand = SystemRandom()
     n = len(pass_list)
@@ -31,39 +33,14 @@ def generate_rand():
     rand_word = pass_list[x]+str(num)
     pyperclip.copy(rand_word)
     print(rand_word)
-    win_main.Element('_BAR_').Update(rand_word)
 
 
+tray = sg.SystemTray(menu=menu_def, filename=resource_path('Icon.ico'))
 
-layout_main = [
-                 
-            
-            
-            [sg.Text('Random Password is:')],
-            [sg.Text('')],
-            
-            [sg.Button('Generate',key='_RANDOM_',pad=((39, 0), (2, 2)))],
-            [sg.Text('')],
-            
-            [sg.StatusBar('Status bar ...',pad=((0, 0), (20, 0)),auto_size_text=False,size=(15, None),key='_BAR_')],
-          ]  
-
-
-win_main = sg.Window('Rename PC', layout_main, location=(880,50),icon=resource_path('window.ico'))
-
-
-
-# main loop
-
-while True:
-    ev_main, values = win_main.read()
-    
-    if ev_main=='_RANDOM_':
+while True:  # The event loop
+    menu_item = tray.Read()
+    if menu_item == 'Exit':
+        break
+    elif menu_item == 'Generate':
         generate_rand()
         
-    
-    if ev_main is None: # if user closes window or clicks cancel
-        win_main.Close()
-        break
-   
-    
