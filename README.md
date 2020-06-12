@@ -27,6 +27,9 @@ Generates capitalised day of the week with a 4 digit number at the end and rando
 # Installation
 
 Clone this repository and install [requirements.txt](requirements.txt) dependencies.
+```bash
+pip install -r requirements.txt
+```
 
 # Usage
 
