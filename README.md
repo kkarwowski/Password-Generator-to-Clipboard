@@ -8,20 +8,20 @@ Are you tired of coming up with passwords for new starters in your organisation?
 
 There are two different types of passwords generated :
 
-**Simple**
+**Simple:**
 
 Generates capitalised day of the week plus 4 digit number, for example:
 
-Tuesday2354
+**_Tuesday2354
 
 
-**Complex**
+**Complex:**
 
 Generates capitalised day of the week with a 4 digit number at the end and random special character anywhere in the word, for example:
 
-Tuesd@ay2354
-Fr(iday3189
+**_Tuesd@ay2354
 
+**_Fr(iday3189
 
 
 # Installation
