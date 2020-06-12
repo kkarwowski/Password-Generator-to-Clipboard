@@ -34,8 +34,3 @@ pip install -r requirements.txt
 # Usage
 
 Right click on the padlock icon in your system tray and choose desired option.
-
-
-```
-
-```
